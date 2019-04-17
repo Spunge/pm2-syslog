@@ -1,11 +1,11 @@
 
-var pm2       = require('pm2');
+var pmx       = require('pmx');
 var SysLogger = require('ain2');
 
 pmx.initModule({}, function(err, config) {
 	var logger = new SysLogger(config);
 
-	pm2.launchBus(function(err, bus) {
+	pmx.launchBus(function(err, bus) {
 	  bus.on('*', function(event, data){
 		if (event == 'process:event') {
 		  logger.warn('app=pm2 target_app=%s target_id=%s restart_count=%s status=%s',

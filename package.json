@@ -17,10 +17,11 @@
 			"script": "app.js"
 		}
 	],
-	"config": {             
+	"config": {
 		"tag": "pm2",
 		"facility": "syslog",
-		"hostname": "localhost"
+		"hostname": "localhost",
+		"address": "localhost"
 	},
 	"author": "Alexandre Strzelewicz",
 	"license": "MIT"
